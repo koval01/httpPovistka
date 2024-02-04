@@ -1,1 +1,42 @@
-<html></html>
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЄПовістка</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='icons/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='icons/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='icons/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='icons/site.webmanifest') }}">
+    <link rel="mask-icon" href="{{ url_for('static', filename='icons/safari-pinned-tab.svg') }}" color="#000000">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='icons/favicon.ico') }}">
+    <meta name="apple-mobile-web-app-title" content="ЄПовістка">
+    <meta name="application-name" content="ЄПовістка">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="msapplication-config" content="{{ url_for('static', filename='icons/browserconfig.xml') }}">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body class="noselect">
+    <div class="bg-gradient" style="animation-play-state:running"></div>
+    <div class="logo-container">
+        <div class="logo">
+            <div class="header_logo-gerb"></div>
+            <div class="header_logo-diya"></div>
+        </div>
+        <h1>ЄПовістка</h1>
+    </div>
+    <form id="generateForm">
+        <input type="text" id="name" name="name" placeholder="І'мя" required>
+        <input type="text" id="address" name="address" placeholder="Адреса" required>
+        <input type="text" id="issuer" name="issuer" placeholder="Видавник" required>
+        
+        <button type="submit">Отримати</button>
+    </form>
+
+    <div id="responseContainer"></div>
+
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+</html>
